@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import MainContent from "./components/MainContent";
 
 import gradientPNG from "../public/gradient.png"; // Import the PNG gradient image
 
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="w-screen flex justify-center mt-6">
         <div>
           <Navbar />
+          <MainContent />
         </div>
       </div>
     </main>
