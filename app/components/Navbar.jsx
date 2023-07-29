@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="border-2 border-gray-700 rounded-full p-3">
+    <div className="border-2 border-gray-700 rounded-full p-3 bg-black">
       <div className="flex justify-between items-center px-10 rounded-full w-[1042px] bg-black bg-opacity-50 backdrop-blur-md">
         <img className="object-cover" alt="Image" src="logo.png" />
         <div className="flex gap-10">

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MainContent() {
   return (
-    <div className="bg-black mt-52 flex justify-center items-center">
+    <div className="bg-transparent mt-36 flex justify-center items-center">
       <div className="max-w-[500px] flex flex-col gap-8 items-center">
         <div className="text-center">
           <div
