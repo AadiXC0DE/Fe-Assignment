@@ -79,11 +79,6 @@ export default function Auth() {
             >
               Submit
             </button>
-            <Link legacyBehavior href="/dashboard">
-              <a className="inline-block align-baseline font-bold text-sm text-black hover:text-gray-800">
-                Go to Dashboard
-              </a>
-            </Link>
           </div>
         </form>
       </div>
