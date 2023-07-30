@@ -24,10 +24,12 @@ export default function MainContent() {
               fontStyle: "normal",
               fontWeight: 500,
               lineHeight: "126%",
-              maxWidth: "500px",
+              minWidth: "600px",
             }}
           >
-            <span className="font-semibold">the next generation of</span>
+            <span className="font-semibold inline-block">
+              the next generation of
+            </span>
             <br />
             <span
               className="font-playfair whitespace-pre-wrap inline"

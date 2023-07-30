@@ -1,6 +1,7 @@
 "use client";
 import { useQuery } from "react-query";
 import { useState } from "react";
+import Navbar from "../components/Navbar";
 
 const fetchMovies = async () => {
   const res = await fetch(
@@ -18,21 +19,26 @@ export default function Dashboard() {
   if (!data) return <div>No data</div>;
 
   return (
-    <div className="container mx-auto">
-      <h1 className="text-4xl font-bold text-center my-8">Popular Movies</h1>
-      <div className="grid grid-cols-4 gap-4">
-        {data.results.map((movie) => (
-          <div key={movie.id} className="flex flex-col items-center">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt={movie.title}
-              className="w-48 rounded-lg"
-            />
-            <h2 className="text-lg font-medium text-center mt-2">
-              {movie.title}
-            </h2>
-          </div>
-        ))}
+    <div className="bg-black bg-center bg-no-repeat overflow-x-hidden">
+      <div className="w-screen flex justify-center mt-6">
+        <Navbar />
+      </div>
+      <div className="container">
+        <h1 className="text-4xl font-bold text-center my-8">Popular Movies</h1>
+        <div className="grid grid-cols-4 gap-4">
+          {data.results.map((movie) => (
+            <div key={movie.id} className="flex flex-col items-center">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title}
+                className="w-48 rounded-lg"
+              />
+              <h2 className="text-lg font-medium text-center mt-2">
+                {movie.title}
+              </h2>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
