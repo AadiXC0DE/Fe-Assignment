@@ -1,3 +1,4 @@
+//main text component
 import React from "react";
 
 export default function MainContent() {

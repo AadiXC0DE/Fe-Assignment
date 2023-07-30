@@ -4,6 +4,7 @@ import { supabase } from "../../api/api";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 
+//supabase login
 export default function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
