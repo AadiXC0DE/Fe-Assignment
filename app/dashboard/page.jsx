@@ -2,6 +2,7 @@
 import { useQuery } from "react-query";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import WithAuth from "../components/WithAuth";
 
 //fetching movies
 
@@ -12,7 +13,7 @@ const fetchMovies = async () => {
   return res.json();
 };
 
-export default function Dashboard() {
+function Dashboard() {
   const { data, isLoading, error } = useQuery("movies", fetchMovies);
   const [movies, setMovies] = useState([]);
 
@@ -45,3 +46,4 @@ export default function Dashboard() {
     </div>
   );
 }
+export default WithAuth(Dashboard);
