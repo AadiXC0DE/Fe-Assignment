@@ -12,7 +12,7 @@ const withAuth = (Component) => {
           data: { user },
         } = await supabase.auth.getUser();
         if (!user) {
-          window.location.href = "/"; // Redirect to login if the user is not authenticated
+          window.location.href = "/auth";
         } else {
           setAuthenticated(true);
         }
@@ -24,7 +24,7 @@ const withAuth = (Component) => {
     if (authenticated) {
       return <Component {...props} />;
     } else {
-      return null; // Alternatively, you can return a loading indicator or a login prompt here
+      return null;
     }
   };
 };
